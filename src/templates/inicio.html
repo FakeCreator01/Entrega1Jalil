@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Bienvenido a la guardería</h1>
+
+	<h4 style="background-color: darkgrey">¿Quieres buscar a un bebe por su nombre?</h4>
+	<form action="/AppGuarderia/buscar" method="GET">
+		<input type="text" name="nombre_bebe" id="nombre_bebe">
+		<button type="submit">Buscar</button>
+	</form>
+
+	
+	{{respuesta}}
+
+	{% if bebes %}
+		
+		<ul>
+			{% for bebe in bebes %}
+			<hr>
+			<i>Bebe:</i>
+				<li><b>NOMBRE:</b> {{bebe.nombre}}</li>
+				<li><b>ID:</b> {{bebe.id}}</li>
+				<li><b>EDAD:</b> {{bebe.edad}} meses</li>
+			{% endfor %}
+		</ul>
+
+	{% endif %}
+	
+
+
+
+	{% if not respuesta %}
+		
+	
+		<h4 style="background-color: darkgrey"><i>¡Estás son nuestra niñeras!</i></h4>
+		{% for niniera in ninieras %}
+			<div>
+				<hr>
+				<b>Nombre:</b> {{niniera}}
+			</div>
+			{% endfor %}
+
+			
+			<h4 style="background-color: darkgrey"><i>Comidas sugeridas para esta semana:</i></h4>
+			{% for comida in comidas %}
+			<div>
+				<hr>
+					{{comida}}
+			</div>
+		{% endfor %}
+
+	{% endif %}
+
+
+	
+{% endblock content %}

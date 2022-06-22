@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web</title>
+</head>
+<body>
+	<nav>
+		<li><a href="{% url 'inicio' %}">Inicio</a></li>
+		<li><a href="{% url 'AppGuarderia:bebes' %}">Registra un bebe</a></li>
+		<li><a href="{% url 'AppGuarderia:ninieras' %}">Registra una niniera</a></li>
+		<li><a href="{% url 'AppGuarderia:comidas' %}">Sugiere una comida</a></li>
+	</nav>
+	<hr>
+	{% block content %}
+		
+	{% endblock content %}
+</body>
+</html>

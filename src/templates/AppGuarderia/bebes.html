@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>¡Registra un bebe!</h1>
+	{% if form.errors %}
+		Estan mal los datos revisar
+	{% endif %}
+
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+
+		<button type="submit">Registrar</button>
+	</form>
+{% endblock content %}
