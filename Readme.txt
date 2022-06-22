@@ -7,6 +7,7 @@ Los administradores tendrán más permisos dentro de la página y podrán regist
 
 NOTA: 
 - Por convención no utilize la letra 'ñ' en la palabra "Niñeras". En vez de ello usé 'Ninieras'.
+- El nombre del proyecto django por convención es 'src'
 
 
 Detalles técnicos:
