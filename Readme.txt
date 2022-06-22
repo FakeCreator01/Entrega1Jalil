@@ -27,13 +27,13 @@ En el archivo 'forms.py' se utilizaron tres ModelForm para cada modelo: 'BebeFor
 En cuanto a las views, se utilizaron cinco, cuatro para la 'AppGuarderia' que son:
 'Buscar': que guarda la logica del buscador que tenemos en inicio
 y 'Bebe', 'Niniera' y 'Comida' donde se guarda la logica de un formulario para registrar un objeto nuevo.
-y una para el projecto general en 'src':
+Y una para el projecto general en 'src':
 'Inicio': donde enlisté todas las ninieras y las comidas sugeridas, así cómo también un buscador de bebes.
 
 - URLS Y LINKS:
 
 Cada view se registró en el archivo 'urls.py' donde cuando se hace una solicitud a una determinada url, dirige al cliente a un template.
-Hay dos archivos urls.py -> el del proyecto que redirije al inicio (localhost:8000/) y el de la AppGuarderia que redirije a:
+Hay dos archivos urls.py -> el del proyecto 'src' que redirije al inicio (localhost:8000/) y el de la AppGuarderia que redirije a:
 
 '/bebes' Donde se registraran bebes nuevos
 '/ninieras' Donde se registran ninieras nuevas
